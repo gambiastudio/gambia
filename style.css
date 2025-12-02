@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.main-title {
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    color: #EAEAEA;
+    font-size: 20vw;
+    line-height: 0.85;
+    letter-spacing: -0.01em;
+    margin-bottom: 30px;
+    font-weight: 400;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Glitch effect for individual characters */
+.main-title .char {
+    display: inline-block;
+    position: relative;
+    color: transparent;
+}
+
+.main-title .char::before {
+    content: attr(data-char);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #EAEAEA;
+    animation: glitch-switch 0.3s steps(1);
+    animation-fill-mode: forwards;
+    animation-delay: var(--delay);
+}
+
+@keyframes glitch-switch {
+    0% {
+        content: var(--g0);
+    }
+    10% {
+        content: var(--g1);
+    }
+    20% {
+        content: var(--g2);
+    }
+    30% {
+        content: var(--g3);
+    }
+    40% {
+        content: var(--g4);
+    }
+    50% {
+        content: var(--g5);
+    }
+    60% {
+        content: var(--g6);
+    }
+    70% {
+        content: var(--g7);
+    }
+    80% {
+        content: var(--g8);
+    }
+    90% {
+        content: var(--g9);
+    }
+    100% {
+        content: attr(data-char);
+    }
+}
+
+.subtitle {
+    font-family: 'Kulim Park', sans-serif;
+    color: #666666;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+    text-align: right;
+    padding-right: 80px;
+}
+
+.email {
+    font-family: 'Special Gothic Condensed One', sans-serif;
+    color: #EAEAEA;
+    font-size: 28px;
+    letter-spacing: 0.01em;
+    text-align: right;
+    padding-right: 80px;
+}
+
+.email a {
+    color: #EAEAEA;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.email a:hover {
+    opacity: 0.6;
+}
+
+/* Desktop - 1600px+ */
+@media screen and (min-width: 1600px) {
+    .main-title {
+        font-size: 33vw;
+        max-width: 90%;
+    }
+    .subtitle {
+        font-size: 20px;
+        padding-right: 100px;
+    }
+    .email {
+        font-size: 28px;
+        padding-right: 100px;
+    }
+}
+
+/* Desktop - 1280px */
+@media screen and (max-width: 1599px) {
+    .main-title {
+        font-size: 33vw;
+    }
+    .subtitle {
+        font-size: 18px;
+        padding-right: 70px;
+    }
+    .email {
+        font-size: 26px;
+        padding-right: 70px;
+    }
+}
+
+/* Tablet - 800px */
+@media screen and (max-width: 1279px) {
+    .main-title {
+        font-size: 22vw;
+    }
+    .subtitle {
+        font-size: 16px;
+        padding-right: 50px;
+    }
+    .email {
+        font-size: 22px;
+        padding-right: 50px;
+    }
+}
+
+/* Mobile - 375px */
+@media screen and (max-width: 800px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .main-title {
+        font-size: 24vw;
+        margin-bottom: 20px;
+    }
+    
+    .subtitle {
+        font-size: 12px;
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 15px;
+        letter-spacing: 0.12em;
+    }
+    
+    .email {
+        font-size: 18px;
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main-title {
+        font-size: 24vw;
+    }
+    
+    .subtitle {
+        font-size: 11px;
+    }
+    
+    .email {
+        font-size: 16px;
+    }
+}
