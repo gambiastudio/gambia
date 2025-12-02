@@ -21,7 +21,7 @@ body {
 
 .main-title {
     font-family: 'Special Gothic Condensed One', sans-serif;
-    color: #EAEAEA;
+    color: #ffffff;
     font-size: 20vw;
     line-height: 0.85;
     letter-spacing: -0.01em;
@@ -30,6 +30,8 @@ body {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    z-index: 1;
 }
 
 /* Glitch effect for individual characters */
@@ -44,7 +46,7 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    color: #EAEAEA;
+    color: #ffffff;
     animation: glitch-switch 0.3s steps(1);
     animation-fill-mode: forwards;
     animation-delay: var(--delay);
@@ -95,19 +97,23 @@ body {
     margin-bottom: 20px;
     text-align: right;
     padding-right: 80px;
+    position: relative;
+    z-index: 10;
 }
 
 .email {
     font-family: 'Special Gothic Condensed One', sans-serif;
-    color: #EAEAEA;
+    color: #ffffff;
     font-size: 28px;
     letter-spacing: 0.01em;
     text-align: right;
     padding-right: 80px;
+    position: relative;
+    z-index: 10;
 }
 
 .email a {
-    color: #EAEAEA;
+    color: #ffffff;
     text-decoration: none;
     transition: opacity 0.3s ease;
     cursor: pointer;
@@ -124,7 +130,7 @@ body {
         max-width: 90%;
     }
     .subtitle {
-        font-size: 20px;
+        font-size: 24px;
         padding-right: 100px;
     }
     .email {
@@ -139,7 +145,7 @@ body {
         font-size: 33vw;
     }
     .subtitle {
-        font-size: 18px;
+        font-size: 24px;
         padding-right: 70px;
     }
     .email {
@@ -151,10 +157,10 @@ body {
 /* Tablet - 800px */
 @media screen and (max-width: 1279px) {
     .main-title {
-        font-size: 22vw;
+        font-size: 33vw;
     }
     .subtitle {
-        font-size: 16px;
+        font-size: 24px;
         padding-right: 50px;
     }
     .email {
@@ -170,12 +176,12 @@ body {
     }
     
     .main-title {
-        font-size: 24vw;
+        font-size: 28vw;
         margin-bottom: 20px;
     }
     
     .subtitle {
-        font-size: 12px;
+        font-size: 20px;
         text-align: center;
         padding-right: 0;
         margin-bottom: 15px;
@@ -183,22 +189,25 @@ body {
     }
     
     .email {
-        font-size: 18px;
+        font-size: 22px;
         text-align: center;
         padding-right: 0;
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 387px) {
+    .container {
+        padding: 0;
+    }
     .main-title {
-        font-size: 24vw;
+        font-size: 25vw;
     }
     
     .subtitle {
-        font-size: 11px;
+        font-size: 16px;
     }
     
     .email {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
