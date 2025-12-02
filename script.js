@@ -33,6 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             title.appendChild(span);
+            
+            // Safari fix: Force final character display after animation completes
+            setTimeout(() => {
+                span.style.setProperty('--final-char', `"${char}"`);
+            }, (delay + 0.35) * 1000);
         });
     }
     

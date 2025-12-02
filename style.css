@@ -55,36 +55,51 @@ body {
 @keyframes glitch-switch {
     0% {
         content: var(--g0);
+        opacity: 1;
     }
-    10% {
+    9% {
         content: var(--g1);
+        opacity: 1;
     }
-    20% {
+    18% {
         content: var(--g2);
+        opacity: 1;
     }
-    30% {
+    27% {
         content: var(--g3);
+        opacity: 1;
     }
-    40% {
+    36% {
         content: var(--g4);
+        opacity: 1;
     }
-    50% {
+    45% {
         content: var(--g5);
+        opacity: 1;
     }
-    60% {
+    54% {
         content: var(--g6);
+        opacity: 1;
     }
-    70% {
+    63% {
         content: var(--g7);
+        opacity: 1;
     }
-    80% {
+    72% {
         content: var(--g8);
+        opacity: 1;
+    }
+    81% {
+        content: var(--g9);
+        opacity: 1;
     }
     90% {
-        content: var(--g9);
+        content: attr(data-char);
+        opacity: 1;
     }
     100% {
         content: attr(data-char);
+        opacity: 1;
     }
 }
 
