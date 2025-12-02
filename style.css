@@ -16,7 +16,7 @@ body {
 .container {
     text-align: center;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1600px;
 }
 
 .main-title {
@@ -126,7 +126,7 @@ body {
 /* Desktop - 1600px+ */
 @media screen and (min-width: 1600px) {
     .main-title {
-        font-size: 30vw;
+        font-size: 26vw;
         max-width: 90%;
     }
     .subtitle {
